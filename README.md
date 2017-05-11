@@ -13,7 +13,7 @@ Memory  | 2/3 GB RAM
 Android Version | CyanogenOS 13 (6.0.1)
 Storage | 16/32 GB
 MicroSD | Up to 64/128 GB
-Battery | Removable Li-Ion 2700/3010mAh battery
+Battery | Li-Ion 2700/3010mAh battery
 Display | 720 x 1280 pixels, 5.0 inches / 1080 x 1920 pixels, 5.2 inches
 Camera  | 13/16 MP, autofocus, flash LED
 
