@@ -9,9 +9,7 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    p2p_supplicant_overlay.conf \
-    wpa_supplicant_overlay.conf
+    wpa_supplicant.conf 
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \

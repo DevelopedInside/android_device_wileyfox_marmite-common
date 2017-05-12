@@ -22,23 +22,12 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
-# KEYMASTER
-KM_IMAGES := \
-    keymaster.b00 keymaster.b01 keymaster.b02 keymaster.b03 keymaster.mdt
-
-KM_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/keymaster/,$(notdir $(KM_IMAGES)))
-$(KM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Keymaster Firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(subst r,,$(notdir $@)) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(KM_SYMLINKS)
-
 # Create a link for the WCNSS config file, which ends up as a writable
-# version in /system/etc/wifi/
+# version in /data/misc/wifi
 $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
-    ln -sf /system/etc/wifi/WCNSS_qcom_cfg.ini \
+    ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
 	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 
 endif
+
+#include device/wileyfox/marmite-common/tftp.mk
