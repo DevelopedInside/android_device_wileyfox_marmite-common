@@ -13,12 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/wileyfox/marmite-common
+DEVICE_COMMON_PATH := device/wileyfox/marmite-common
 
 include device/wileyfox/msm8937-common/BoardConfigCommon.mk
 
 # Include board config fragments
-include $(DEVICE_PATH)/board/*.mk
+include $(DEVICE_COMMON_PATH)/board/*.mk
 
 # inherit from proprietary files
 -include vendor/wileyfox/marmite/BoardConfigVendor.mk

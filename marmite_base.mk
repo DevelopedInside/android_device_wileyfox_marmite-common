@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # Inherit from msm8937-common
 $(call inherit-product, device/wileyfox/msm8937-common/msm8937.mk)
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Overlay
 #DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

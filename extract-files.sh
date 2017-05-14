@@ -2,7 +2,8 @@
 
 set -e
 
-export DEVICE=marmite
+export DEVICE_export=marmite
+export DEVICE=marmite-common
 export VENDOR=wileyfox
 
 function extract() {
@@ -51,7 +52,7 @@ else
   fi
 fi
 
-BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
+BASE=../../../vendor/$VENDOR/$DEVICE_export/proprietary
 rm -rf $BASE/*
 
 extract ../../$VENDOR/$DEVICE/proprietary-files.txt $BASE
