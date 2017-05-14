@@ -1,2 +1,3 @@
-# Keystore
-TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
+

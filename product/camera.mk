@@ -1,3 +1,7 @@
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Camera configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8937_camera.xml:system/etc/camera/msm8937_camera.xml \
