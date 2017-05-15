@@ -1,3 +1,3 @@
 # Keymaster
-#TARGET_PROVIDES_KEYMASTER := true
+TARGET_PROVIDES_KEYMASTER := true
 
