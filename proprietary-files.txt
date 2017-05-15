@@ -614,6 +614,9 @@ vendor/lib/libmmosal.so
 vendor/lib64/libFlacSwDec.so
 -vendor/lib64/libMpeg4SwEncoder.so
 
+vendor/media/LMspeed_508.emd
+vendor/media/PFFprec_600.emd
+
 # Modem
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
@@ -652,6 +655,8 @@ vendor/lib64/libperipheral_client.so
 vendor/bin/mm-pp-dpps
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
+vendor/lib64/libmm-disp-apis.so
+vendor/lib64/libmm-qdcm.so
 
 # QMI
 bin/irsc_util
