@@ -374,9 +374,11 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_template.so 
 vendor/lib/libmmcamera_isp_wb40.so 
 
-
 # Charger
 bin/hvdcp_opti
+
+# Crypto
+vendor/lib64/libcryptfs_hw.so
 
 # DPM
 bin/dpmd
