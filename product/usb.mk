@@ -8,9 +8,13 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.ptp_adb=2283 \
     ro.usb.id.ums=2286 \
     ro.usb.id.ums_adb=2285 \
-    ro.usb.vid=2970 \
+    ro.usb.vid=2970 
+
+# USB Secure
+ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0 \
+    ro.allow.mock.location=0 \
     ro.config.always_show_roaming=true
 
 # Set default USB interface
