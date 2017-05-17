@@ -423,6 +423,7 @@ vendor/lib64/libtzdrmgenprov.so
 bin/gx_fpd
 lib64/hw/fingerprint.msm8937.so
 lib64/hw/gxfingerprint.default.so
+lib64/libalgoandroid.so
 lib64/libfp_client.so
 lib64/libfpservice.so
 
