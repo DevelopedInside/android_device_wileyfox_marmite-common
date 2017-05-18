@@ -423,6 +423,7 @@ vendor/lib64/libtzdrmgenprov.so
 bin/gx_fpd
 lib64/hw/fingerprint.msm8937.so
 lib64/hw/gxfingerprint.default.so
+lib64/libalgoandroid.so
 lib64/libfp_client.so
 lib64/libfpservice.so
 
@@ -722,7 +723,6 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libsystem_health_mon.so
 
 # NFC
--vendor/app/NQNfcNci/NQNfcNci.apk
 vendor/lib/hw/nfc_nci.nqx.default.so
 vendor/lib64/hw/nfc_nci.nqx.default.so
 
