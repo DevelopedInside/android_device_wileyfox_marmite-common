@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2014, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -172,6 +172,8 @@ public:
     virtual enum loc_api_adapter_err
         setSUPLVersion(uint32_t version);
     virtual enum loc_api_adapter_err
+        setNMEATypes (uint32_t typesMask);
+    virtual enum loc_api_adapter_err
         setLPPConfig(uint32_t profile);
     virtual enum loc_api_adapter_err
         setSensorControlConfig(int sensorUsage, int sensorProvider);
@@ -214,9 +216,15 @@ public:
     virtual void installAGpsCert(const DerEncodedCertificate* pData,
                                  size_t length,
                                  uint32_t slotBitMask);
-    inline virtual void setInSession(bool inSession) {}
+    inline virtual void setInSession(bool inSession) {
+
+        (void)inSession;
+    }
     inline bool isMessageSupported (LocCheckingMessagesID msgID) const {
-        if (msgID > (sizeof(mSupportedMsg) << 3)) {
+
+        // confirm if msgID is not larger than the number of bits in
+        // mSupportedMsg
+        if ((uint64_t)msgID > (sizeof(mSupportedMsg) << 3)) {
             return false;
         } else {
             uint32_t messageChecker = 1 << msgID;

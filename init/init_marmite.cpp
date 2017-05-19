@@ -87,8 +87,14 @@ static void init_alarm_boot_properties()
     }
 }
 
-/* Wileyfox Swift 2 / Wileyfox Swift 2 Plus*/
+/* Wileyfox Swift 2 */
 void load_marmite() {
+    property_set("ro.sf.lcd_density", "320");
+    property_set("ro.media.maxmem", "10590068224");
+}
+
+/* Wileyfox Swift 2 Plus */
+void load_marmitePlus() {
     property_set("ro.sf.lcd_density", "320");
 }
 
@@ -104,9 +110,12 @@ void vendor_load_properties()
     property_set("qemu.hw.mainkeys", "0");
     property_get("ro.boot.cmv", cmv);
 
-    if (!strcmp(cmv, "mv1") || !strcmp(cmv, "mv2")) {
-        /* Swift 2 / Plus */
+    if (!strcmp(cmv, "mv1")) {
+        /* Swift 2 */
         load_marmite();
+    } else if (!strcmp(cmv, "mv2")){
+        /* Swift 2 Plus*/
+        load_marmitePlus();
     } else if (!strcmp(cmv, "mv3")) {
         /* Swift 2X */
         load_marmiteX();
